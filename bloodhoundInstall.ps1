@@ -11,8 +11,6 @@ cd "C:\"
 
 mkdir Bloodhound -ErrorAction SilentlyContinue
 
-cd "C:\Bloodhound"
-
 #Variables
 
 $bloodHoundDir = "C:\Bloodhound"
@@ -30,8 +28,9 @@ $neo4jBin = "C:\Bloodhound\neo4j\neo4j-community-4.2.1\bin"
 
 $sharpHoundUrl = "https://github.com/BloodHoundAD/BloodHound/raw/master/Collectors/SharpHound.exe"
 
-# Unattended Install of Firefox
+cd $bloodHoundDir
 
+# Unattended Install of Firefox
 
 wget $SourceURL -OutFile $firefoxInstaller -ErrorAction SilentlyContinue
 Start-Process -FilePath $firefoxInstaller -Args "/q" -ErrorAction SilentlyContinue
