@@ -18,13 +18,13 @@ $bloodHoundDir = "C:\Bloodhound"
 $SourceURL = "https://download.mozilla.org/?product=firefox-msi-latest-ssl&os=win64&lang=en-US" 
 $firefoxInstaller = $bloodHoundDir + "\firefox.msi" 
 
-$openJDKUrl = "https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_windows-x64_bin.zip"
+$openJDKUrl = "https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4b/9/GPL/openjdk-20.0.1_windows-x64_bin.zip"
 
-$neo4JUrl = "https://neo4j.com/artifact.php?name=neo4j-community-4.2.1-windows.zip"
+$neo4JUrl = "https://go.neo4j.com/download-thanks.html?edition=community&release=5.8.0&flavour=winzip"
 
-$bloodHoundUrl = "https://github.com/BloodHoundAD/BloodHound/releases/download/4.0.1/BloodHound-win32-x64.zip"
+$bloodHoundUrl = "https://github.com/BloodHoundAD/BloodHound/releases/download/v4.3.1/BloodHound-win32-x64.zip"
 
-$neo4jBin = "C:\Bloodhound\neo4j\neo4j-community-4.2.1\bin"
+$neo4jBin = "C:\Bloodhound\neo4j\neo4j-community-5.8.0\bin"
 
 $sharpHoundUrl = "https://github.com/BloodHoundAD/BloodHound/raw/master/Collectors/SharpHound.exe"
 
@@ -53,7 +53,7 @@ Expand-Archive .\openjdk.zip -DestinationPath "C:\Program Files\Java" -ErrorActi
 
 Write-Host "Setting up Java variables. If the script pauses and is not progressing after a bit, hit the space bar." 
 
-setx -m JAVA_HOME "C:\Program Files\Java\jdk-11"
+setx -m JAVA_HOME "C:\Program Files\Java\jdk-20.0.1"
 setx -m PATH "%PATH%;%JAVA_HOME%\bin";
 
 Write-Host "Java Installed. Installing neo4j..."
@@ -65,7 +65,7 @@ wget $neo4JUrl -OutFile neo4j.zip -erroraction 'silentlycontinue'
 
 Expand-Archive .\neo4j.zip -DestinationPath "C:\Bloodhound\neo4j"
 
-[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\Program Files\Java\jdk-11")
+[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\Program Files\Java\jdk-20.0.1")
 
 Write-Host "neo4j Installed. If the script pauses and is no progressing after a bit, hit the space bar again."
 
