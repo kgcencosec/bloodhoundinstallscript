@@ -20,7 +20,7 @@ $firefoxInstaller = $bloodHoundDir + "\firefox.msi"
 
 $openJDKUrl = "https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4b/9/GPL/openjdk-20.0.1_windows-x64_bin.zip"
 
-$neo4JUrl = "https://go.neo4j.com/download-thanks.html?edition=community&release=5.8.0&flavour=winzip"
+$neo4JUrl = "https://neo4j.com/artifact.php?name=neo4j-community-5.8.0-windows.zip"
 
 $bloodHoundUrl = "https://github.com/BloodHoundAD/BloodHound/releases/download/v4.3.1/BloodHound-win32-x64.zip"
 
